@@ -1,10 +1,11 @@
+import Image from "next/image";
 const About = () => {
     return (
         <section className="pt-5 pb-5">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">
-                        <img src="/images/common/aboutus_side_image.jpeg" className="img-fluid" />
+                        <Image src="/images/common/aboutus_side_image.jpeg" className="img-fluid" width="450" height="300" />
                     </div>
                     <div className="col-lg-6">
                         <h1>About Us</h1>
