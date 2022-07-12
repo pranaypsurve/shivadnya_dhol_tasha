@@ -43,30 +43,34 @@ const Contact = () => {
                         <h1 className="text-center mb-5">Get in touch</h1>
                     </div>
                     <div className="col-md-12">
-                        <form action="" onSubmit={handleAddmissionFormSubmit} style={{ padding: "45px", background: "coral" }}>
+                        <form action="" className="rounded shadow" onSubmit={handleAddmissionFormSubmit} style={{ padding: "45px", background: "coral" }}>
                             <div className="row">
-                                <div className="col-md-4">
+                                <div className="col-md-4 mb-3">
                                     <div className="form-group">
-                                        <input type='text' name='name' className="form-control" onChange={handleAddmissionFormInput} placeholder="Your name" />
+                                        <label htmlFor="name" className="form-label">Name</label>
+                                        <input type='text' name='name' id="name" className="form-control" onChange={handleAddmissionFormInput} placeholder="Your name" />
                                     </div>
                                 </div>
-                                <div className="col-md-4">
+                                <div className="col-md-4 mb-3">
                                     <div className="form-group">
+                                        <label htmlFor="name" className="form-label">Contact Number</label>
                                         <input type='text' name='phoneno' className="form-control" onChange={handleAddmissionFormInput} placeholder="Your phone number" />
                                     </div>
                                 </div>
-                                <div className="col-md-4">
+                                <div className="col-md-4 mb-3">
                                     <div className="form-group">
+                                        <label htmlFor="name" className="form-label">Email</label>
                                         <input type='text' name='email' className="form-control" onChange={handleAddmissionFormInput} placeholder="Your email" />
                                     </div>
                                 </div>
-                                <div className="col-md-12 pt-3">
+                                <div className="col-md-12 mb-3">
                                     <div className="form-group">
-                                        <textarea className="form-control" onChange={handleAddmissionFormInput} name='message' placeholder="Your message" />
+                                        <label htmlFor="message" className="form-label">Your Message</label>
+                                        <textarea className="form-control" id="message" onChange={handleAddmissionFormInput} name='message' placeholder="Your message" />
                                         {/* <input type='textarea' className="form-control" placeholder="Your message" /> */}
                                     </div>
                                 </div>
-                                <div className="col-md-12 pt-3">
+                                <div className="col-md-12 mb-3">
                                 {
                                     isLoding ? <button type="submit" className="btn btn-primary" disabled>
                                     <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting Form</button> 

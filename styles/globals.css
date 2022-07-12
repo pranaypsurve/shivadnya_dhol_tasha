@@ -25,3 +25,7 @@ a {
 ul.navbar-nav li.nav-item {
   padding: 12px;
 }
+.active_menu_hover{
+  border-bottom: 4px solid;
+  background: #ffa758;
+}

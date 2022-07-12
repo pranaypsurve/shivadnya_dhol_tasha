@@ -48,38 +48,32 @@ const Addmission = () => {
                     </div>
                     <div className="col-md-12">
                         <form className="mb-5 rounded shadow" onSubmit={handleAddmissionFormSubmit} style={{ padding: "45px", background: "coral" }}>
-                            <div className="row mb-3">
-                                <div className="col-6">
+                            <div className="row ">
+                                <div className="col-md-6 mb-3">
                                     <label htmlFor="firstname" className="form-label">First Name</label>
                                     <input type="text" className="form-control" name="firstname" onChange={handleAddmissionFormInput} id="firstname" aria-describedby="firstname" placeholder="First Name" required />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-md-6 mb-3">
                                     <label htmlFor="lastname" className="form-label">Last Name</label>
                                     <input type="text" className="form-control" name="lastname" onChange={handleAddmissionFormInput} id="lastname" aria-describedby="lastname" placeholder="Last Name" />
                                 </div>
-                            </div>
-                            <div className="row mb-3">
-                                <div className="col-6">
+                                <div className="col-md-6 mb-3">
                                     <label htmlFor="emailaddress" className="form-label">Email Address</label>
                                     <input type="email" className="form-control" name="email" onChange={handleAddmissionFormInput} id="emailaddress" aria-describedby="emailaddress" placeholder="Email Address" />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-md-6 mb-3">
                                     <label htmlFor="contactnumber" className="form-label">Contact Number</label>
                                     <input type="text" className="form-control" name="contactno" onChange={handleAddmissionFormInput} id="contactnumber" aria-describedby="contactnumber" placeholder="Contact Number" />
                                 </div>
-                            </div>
-                            <div className="row mb-3">
-                                <div className="col-6">
+                                <div className="col-md-6 mb-3">
                                     <label htmlFor="datelabel" className="form-label">DOB</label>
                                     <input type="date" className="form-control" name="dob" onChange={handleAddmissionFormInput} id="datelabel" aria-describedby="datelabel" />
                                 </div>
-                                <div className="col-6">
+                                <div className="col-md-6 mb-3">
                                     <label htmlFor="landmark" className="form-label">Landmark</label>
                                     <input type="text" className="form-control" name="landmark" onChange={handleAddmissionFormInput} id="landmark" aria-describedby="landmark" placeholder="Landmark" />
                                 </div>
-                            </div>
-                            <div className="row mb-3">
-                                <div className="col-6">
+                                <div className="col-md-6 mb-3">
                                     <label htmlFor="exampleInputEmail1" className="form-label">Address</label>
                                     <textarea className="form-control" name="address" onChange={handleAddmissionFormInput} placeholder="Address" />
                                 </div>

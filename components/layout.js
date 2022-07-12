@@ -12,14 +12,14 @@ const Layout = ({ children }) => {
         // import("bootstrap/dist/js/bootstrap.bundle.min.js");
         setTimeout(() => {
             setLoading(false);
-        }, 400);
+        }, 300);
     }, []);
     return (
         <>
             {
                 loading ? <> <Head> <title>Loding Page</title> </Head> <BeatLoader color='#D76E36' className="loader" loading={loading} size={30} /> </>
                     : <>
-                    <NextNProgress color="#C71585" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
+                    <NextNProgress color="#C71585" startPosition={0.4} stopDelayMs={100} height={3} showOnShallow={true} />
                         <Head>
                             {/* <link href="/bootstrap4/bootstrap.min.css" rel="stylesheet" /> */}
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
