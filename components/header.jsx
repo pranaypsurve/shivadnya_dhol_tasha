@@ -19,7 +19,7 @@ const Header = () => {
           <ul className="navbar-nav ms-auto">
             <li className={`nav-item ${currentRoute === "/" ? "active_menu_hover" : "non-active"}`}>
               <Link href="/">
-                <a className="nav-link">Home</a>
+                <a className="nav-link fw-bolder">Home</a>
               </Link>
             </li>
             {/* <li className="nav-item">
@@ -29,17 +29,17 @@ const Header = () => {
             </li> */}
             <li className={`nav-item ${currentRoute === "/addmission" ? "active_menu_hover" : "non-active"}`}>
               <Link className="nav-link" href="addmission">
-                <a className="nav-link"  >Addmission</a>
+                <a className="nav-link fw-bolder">Addmission</a>
               </Link>
             </li>
             <li className={`nav-item ${currentRoute === "/about" ? "active_menu_hover" : "non-active"}`}>
               <Link className="nav-link" href="about">
-                <a className="nav-link">About Us</a>
+                <a className="nav-link fw-bolder">About Us</a>
               </Link>
             </li>
             <li className={`nav-item ${currentRoute === "/contact" ? "active_menu_hover" : "non-active"}`}>
               <Link className="nav-link" href="contact">
-                <a className="nav-link">Contact Us</a>
+                <a className="nav-link fw-bolder">Contact Us</a>
               </Link>
             </li>
           </ul>

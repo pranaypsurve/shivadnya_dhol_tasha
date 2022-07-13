@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react";
+import axios from "axios";
 import style from '../styles/Contact.module.css';
+import Head from "next/head";
 const Contact = () => {
     const inputFields = {
         name:'',
@@ -16,13 +18,13 @@ const Contact = () => {
     }
     const handleAddmissionFormSubmit = (e)=>{
         e.preventDefault();
-        // axios.post('/api/post/addmission', formFields)
-        //   .then(function (response) {
-        //     console.log(response);
-        //   })
-        //   .catch(function (error) {
-        //     console.log(error);
-        //   });
+        axios.post('/api/post/contactus', formFields)
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
         setLoding(true);
         setFormSuccessMessage('Submited , we will get back to you soon');
         setTimeout(()=>{ 
@@ -36,6 +38,10 @@ const Contact = () => {
     }
     console.log(formFields);
     return (
+        <>
+        <Head>
+            <title>Contact us | Mira Bhayander</title>
+        </Head>
         <section className={style.contact_us_section}>
             <div className="container">
                 <div className="row">
@@ -48,19 +54,19 @@ const Contact = () => {
                                 <div className="col-md-4 mb-3">
                                     <div className="form-group">
                                         <label htmlFor="name" className="form-label">Name</label>
-                                        <input type='text' name='name' id="name" className="form-control" onChange={handleAddmissionFormInput} placeholder="Your name" />
+                                        <input type='text' name='name' id="name" className="form-control" onChange={handleAddmissionFormInput} placeholder="Your name" required />
                                     </div>
                                 </div>
                                 <div className="col-md-4 mb-3">
                                     <div className="form-group">
                                         <label htmlFor="name" className="form-label">Contact Number</label>
-                                        <input type='text' name='phoneno' className="form-control" onChange={handleAddmissionFormInput} placeholder="Your phone number" />
+                                        <input type='text' name='phoneno' className="form-control" onChange={handleAddmissionFormInput} placeholder="Your phone number" required />
                                     </div>
                                 </div>
                                 <div className="col-md-4 mb-3">
                                     <div className="form-group">
                                         <label htmlFor="name" className="form-label">Email</label>
-                                        <input type='text' name='email' className="form-control" onChange={handleAddmissionFormInput} placeholder="Your email" />
+                                        <input type='text' name='email' className="form-control" onChange={handleAddmissionFormInput} placeholder="Your email" required />
                                     </div>
                                 </div>
                                 <div className="col-md-12 mb-3">
@@ -86,6 +92,7 @@ const Contact = () => {
                 </div>
             </div>
         </section>
+        </>
     )
 }
 export default Contact;

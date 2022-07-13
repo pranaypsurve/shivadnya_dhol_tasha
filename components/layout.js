@@ -17,9 +17,9 @@ const Layout = ({ children }) => {
     return (
         <>
             {
-                loading ? <> <Head> <title>Loding Page</title> </Head> <BeatLoader color='#D76E36' className="loader" loading={loading} size={30} /> </>
+                loading ? <> <Head> <title>Shivadnya Dhol Tasha Pathak | Mira Bhayander | Thana | Mumbai</title> </Head> <BeatLoader color='#D76E36' className="loader" loading={loading} size={30} /> </>
                     : <>
-                    <NextNProgress color="#C71585" startPosition={0.4} stopDelayMs={100} height={3} showOnShallow={true} />
+                    <NextNProgress color="#e93f24" startPosition={0.4} stopDelayMs={100} height={3} showOnShallow={true} />
                         <Head>
                             {/* <link href="/bootstrap4/bootstrap.min.css" rel="stylesheet" /> */}
                             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
