@@ -80,9 +80,15 @@ const Contact = () => {
                                 {
                                     isLoding ? <button type="submit" className="btn btn-primary" disabled>
                                     <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Submitting Form</button> 
-                                    :
-                                    <><input type="submit" className="btn btn-primary" value="Submit" /> <span className='' style={{fontSize:"18px",paddingLeft:"15px"}} >{formSuccessMessage}</span></>
-                                    
+                                    : <> <input type="submit" className="btn btn-primary" value="Submit" /> 
+                                    {
+                                        formSuccessMessage && <div class="mt-3 alert alert-warning alert-dismissible fade show" role="alert">
+                                        {formSuccessMessage}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div> 
+                                    }
+                                        
+                                    </>
                                 }
                                 </div>
 
