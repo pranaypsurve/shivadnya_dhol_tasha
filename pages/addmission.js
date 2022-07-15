@@ -85,9 +85,9 @@ const Addmission = () => {
                                     :
                                     <><input type="submit" className="btn btn-primary" value="Submit" /> 
                                     {
-                                        formSuccessMessage && <div class="mt-3 alert alert-warning alert-dismissible fade show" role="alert">
+                                        formSuccessMessage && <div className="mt-3 alert alert-warning alert-dismissible fade show" role="alert">
                                         {formSuccessMessage}
-                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                     </div> 
                                     }
                                     </>
