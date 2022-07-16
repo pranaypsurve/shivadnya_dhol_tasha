@@ -88,9 +88,9 @@ function Home(props) {
     </section>
   </>
 }
-export async function getServerSideProps(context) {
+export async function getStaticProps() {
   return {
-    props: {}, // will be passed to the page component as props
+    props: {},
   }
 }
 
