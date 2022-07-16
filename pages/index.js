@@ -5,6 +5,7 @@ import SwiperCore, { Autoplay } from 'swiper'
 SwiperCore.use([Autoplay])
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import Link from 'next/link'
 
 export default function Home() {
   return <>
@@ -14,13 +15,11 @@ export default function Home() {
     <section>
     <Swiper slidesPerView={1} loop={true} autoplay={{delay:2000}} onSlideChange={() => console.log('slide change')} onSwiper={(swiper) => console.log(swiper)}
     >
+      <SwiperSlide><Image alt='Mountains' src='/images/aboutus/6.jpg' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
       <SwiperSlide><Image alt='Mountains' src='/images/aboutus/8.webp' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
-      <SwiperSlide><Image alt='Mountains' src='/images/banner_images/2.jpg' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
-      <SwiperSlide><Image alt='Mountains' src='/images/banner_images/3.jpg' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
-      <SwiperSlide><Image alt='Mountains' src='/images/banner_images/2.jpg' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
-      <SwiperSlide><Image alt='Mountains' src='/images/banner_images/3.jpg' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
-      <SwiperSlide><Image alt='Mountains' src='/images/banner_images/1.jpg' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
-      <SwiperSlide><Image alt='Mountains' src='/images/banner_images/2.jpg' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
+      <SwiperSlide><Image alt='Mountains' src='/images/aboutus/5.jpg' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
+      <SwiperSlide><Image alt='Mountains' src='/images/b1.webp' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
+      <SwiperSlide><Image alt='Mountains' src='/images/b2.webp' width='100%' height='50%' layout='responsive' objectFit='cover'/></SwiperSlide>
     </Swiper>
     </section>
     <section className='pt-5 pb-5'>
@@ -50,6 +49,41 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section className='py-5'>
+      <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-md-12'>
+              <h1 className='text-center pb-5'>Want to Join Us</h1>
+            </div>
+            <div className='col-md-6 text-center'>
+              <Image alt='Mountains' src='/images/addmission_banner.webp' width='550px' height='490px' layout='intrinsic' />
+            </div>
+            <div className='col-md-6'>
+              <div className='text-center pt-4' style={{fontSize:'40px'}}>
+                ढोल म्हणजे काय <br/>
+                ते ठोका पडल्याशिवाय समजत नाही!!<br/>
+                ताशा म्हणजे काय<br/>
+                ते कतरी पडल्याशिवाय समजत नाही!!<br/>
+              </div>
+              <div className='text-center pt-5'>
+                <Link href='addmission'> 
+                  <a className='btn btn-primary btn-lg'>Join Us</a>
+                </Link>
+                <Link href='contact'> 
+                  <a className='btn btn-primary btn-lg mx-3'>Enquiry</a>
+                </Link>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <section className='py-5'>
+      <div className='container-fluid'>
+            <div className='row'>
+
+            </div>
       </div>
     </section>
   </>
