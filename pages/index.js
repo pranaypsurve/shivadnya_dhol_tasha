@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import Link from 'next/link'
 
-export default function Home() {
+function Home(props) {
   return <>
     <Head>
       <title>Shivadnya Dhol Tasha Pathak | Home</title>
@@ -88,3 +88,10 @@ export default function Home() {
     </section>
   </>
 }
+export async function getServerSideProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
+
+export default Home;
