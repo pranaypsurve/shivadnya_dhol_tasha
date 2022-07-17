@@ -28,15 +28,17 @@ const Addmission = () => {
             console.log(error);
           });
         setLoding(true);
-        setFormSuccessMessage('Form Submited');
+        setFormSuccessMessage('Form Submited , we will reach you soon');
         setTimeout(()=>{ 
             e.target.reset();
             setFormFields(inputFields); 
             setLoding(false);
+            
          },1000);
          setTimeout(()=>{
-            setFormSuccessMessage('');
+            setFormSuccessMessage(false);
          },5000);
+         
     }
     return (<>
     <Head><title>Addmission</title></Head>
@@ -85,9 +87,8 @@ const Addmission = () => {
                                     :
                                     <><input type="submit" className="btn btn-primary" value="Submit" /> 
                                     {
-                                        formSuccessMessage && <div className="mt-3 alert alert-warning alert-dismissible fade show" role="alert">
+                                        formSuccessMessage && <div className="mt-3 alert alert-success alert-dismissible fade show" role="alert">
                                         {formSuccessMessage}
-                                        <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                     </div> 
                                     }
                                     </>
